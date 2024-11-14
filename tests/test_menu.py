@@ -8,7 +8,8 @@ def test_visit_menu_links(page:Page):
 
     print("When the user accept the cookies")
     #Localizamos el elemento por texto.
-    page.get_by_text("Accept all").click()
+    #page.get_by_text("Accept all").click()
+    #Esperamos a que cargue la pagina w3school despues de aceptar las cookies
     page.wait_for_url("https://www.w3schools.com/")
 
 
