@@ -4,7 +4,7 @@ def test_search_empty(page:Page):
     print("Given the user is on the w3school homepage")
     page.goto("https://www.w3schools.com/")
 
-    print("When the user accept the cookeis")
+    #print("When the user accept the cookies")
     #page.get_by_text("Accept all & visit the site").click()
 
     print("And the user search with empty value")
@@ -19,8 +19,8 @@ def test_search_valid_value(page:Page):
     print("Given the user open w3school homepage")
     page.goto("https://www.w3schools.com/")
 
-    print("When user accept cookies")
-    page.get_by_text("Accept all & visit the site").click()
+    #print("When user accept cookies")
+    #page.get_by_text("Accept all & visit the site").click()
 
     print("And the user search for HTML content")
     page.get_by_placeholder("Search our tutorials, e.g.").click()
