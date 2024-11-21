@@ -1,7 +1,7 @@
 # Playwright E2E W3Schools
 
 
-Este proyecto realiza pruebas E2E en la web [W3SChools](https://w3schools.com), generando un reporte de resultados. Las pruebas se ejecutan tanto en **Chrome** (escritorio) como en **iPhone 12** (móvil, emulado).
+Este proyecto realiza pruebas E2E en la web [W3Schools](https://w3schools.com), generando un reporte de resultados. Las pruebas se ejecutan tanto en **Chrome** (escritorio) como en **iPhone 12** (móvil, emulado).
 
 ## Tecnologías
 
