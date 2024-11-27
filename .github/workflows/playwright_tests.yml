@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4 #Descargar el codigo de github la ultimo
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -35,12 +35,33 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-report-desktop
+        name: playwright-html-report-desktop
         path: resultsdesktop.html
 
     - name: Upload Videos and Traces
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-traces
+        name: playwright-videos
         path: test-results/
+
+    - name: Run tests on Mobile
+      run: |
+        pytest --capture=tee-sys --html=resultsmobile.html --self-contained-html --device="iPhone 12" --video=on
+
+    - name: Upload Playwright report (Mobile)
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-html-report-mobile
+        path: resultsmobile.html
+
+    - name: Upload Videos and Traces Mobile
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-videos-mobile
+        path: test-results/
+    
+    
+
