@@ -49,7 +49,7 @@ jobs:
       if: always()
       with:
         name: snapshots
-        path: snapshots/
+        path: tests/snapshots/
 
     - name: Run tests on Mobile
       run: |
@@ -74,7 +74,13 @@ jobs:
       if: always()
       with:
         name: snapshots-mobile
-        path: snapshots/
+        path: tests/snapshots/
     
+    - name: Upload Snapshots
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: snapshots-mobile-failures
+        path: tests/snapshots_tests_failures/
     
 
