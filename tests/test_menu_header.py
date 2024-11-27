@@ -6,8 +6,8 @@ def test_visit_menu_header_links(page:Page):
     print("Given user visit w3school homepage")
     page.goto("https://www.w3schools.com/")
 
-    print("And accept all cookies")
-    page.get_by_text("Accept all & visit the site").click()
+    #print("And accept all cookies")
+    #page.get_by_text("Accept all & visit the site").click()
     
     print("When visit menu Tutorials")
     #Si es tamanio movil, hace click en el boton menu.
