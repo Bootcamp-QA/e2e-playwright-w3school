@@ -11,7 +11,7 @@ def test_signup_with_valid_email(page:Page):
 
     print("When the user fill email with valid email")
     #Limpiamos el campo email con .clear
-    page.get_by_placeholder("email").clear()
+    page.get_by_placeholder("emaill").clear()
     #Introducimos un email aleatorio y rellenamos el campo con placeholder email con ese email aleatorio
     email = generar_email_aleatorio()
     page.get_by_placeholder("email").fill(email)
