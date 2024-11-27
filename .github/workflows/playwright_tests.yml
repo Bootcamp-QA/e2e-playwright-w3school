@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-videos
+        name: playwright-videos-traces
         path: test-results/
 
     - name: Run tests on Mobile
@@ -60,7 +60,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-videos-mobile
+        name: playwright-videos-traces-mobile
         path: test-results/
     
     
