@@ -50,6 +50,13 @@ jobs:
       with:
         name: snapshots
         path: tests/snapshots/
+    
+    - name: Upload Snapshots Failures
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: snapshots-desktop-failures
+        path: tests/snapshots_tests_failures/
 
     - name: Run tests on Mobile
       run: |
@@ -76,7 +83,7 @@ jobs:
         name: snapshots-mobile
         path: tests/snapshots/
     
-    - name: Upload Snapshots
+    - name: Upload Snapshots Failures
       uses: actions/upload-artifact@v4
       if: always()
       with:
