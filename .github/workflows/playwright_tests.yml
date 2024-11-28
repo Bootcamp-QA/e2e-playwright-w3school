@@ -47,7 +47,7 @@ jobs:
     
     - name: Upload Snapshots Failures
       uses: actions/upload-artifact@v4
-      if: failures()
+      if: failure()
       with:
         name: snapshots-desktop-failures
         path: tests/snapshot_tests_failures/
@@ -72,7 +72,7 @@ jobs:
     
     - name: Upload Snapshots Failures
       uses: actions/upload-artifact@v4
-      if: failures()
+      if: failure()
       with:
         name: snapshots-mobile-failures
         path: tests/snapshot_tests_failures/
